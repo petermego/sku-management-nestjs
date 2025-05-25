@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BranchModule } from './branch/branch.module';
 import { SkuModule } from './sku/sku.module';
+import { StockLevelModule } from './stock/stock-level.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { SkuModule } from './sku/sku.module';
     MongooseModule.forRoot(process.env.DB_CONNECTION as string),
     BranchModule,
     SkuModule,
+    StockLevelModule,
   ],
   providers: [],
 })
